@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Сотрудники</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light border-bottom sticky-top px-3">
+        <button class="navbar-toggler d-xl-none me-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Главная</a>
+        <button id="logoutBtn" class="btn btn-outline-danger">Выйти</button>
+    </nav>
+
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+
+
+            <nav id="sidebarMenu" class="collapse d-xl-block bg-light sidebar col-xl-2">
+                <div class="position-sticky p-3">
+                    <div id="calendar" class="p-2"></div>
+                    <script type="module" src="js/calendar.js"></script>
+
+                    <div class="accordion" id="sidebarAccordion">
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingStaff">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTasks">
+                                    Задачи
+                                </button>
+                            </h2>
+                            <div id="collapseTasks" class="accordion-collapse collapse"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body p-2">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="index.html" class="btn btn-outline-primary w-100 mb-1">Расписание
+                                                задач</a></li>
+                                        <li><a href="tasks.html" class="btn btn-outline-primary w-100">Список задач</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingStaff">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseStaff">
+                                    Сотрудники
+                                </button>
+                            </h2>
+                            <div id="collapseStaff" class="accordion-collapse collapse"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body p-2">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="empoyees.html" class="btn btn-outline-primary w-100">Список
+                                                сотрудников</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingClients">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseClients">
+                                    Клиенты
+                                </button>
+                            </h2>
+                            <div id="collapseClients" class="accordion-collapse collapse"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body p-2">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="clients.html" class="btn btn-outline-primary w-100">Список
+                                                клиентов</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFinance">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFinance">
+                                    Финансы
+                                </button>
+                            </h2>
+                            <div id="collapseFinance" class="accordion-collapse collapse"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body p-2">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="expenses.html"
+                                                class="btn btn-outline-primary w-100 mb-1">Расходы</a></li>
+                                        <li><a href="salary.html" class="btn btn-outline-primary w-100">Зарплата</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFinance">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAnalysis">
+                                    Аналитика
+                                </button>
+                            </h2>
+                            <div id="collapseAnalysis" class="accordion-collapse collapse"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body p-2">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="statistics.html"
+                                                class="btn btn-outline-primary w-100">Статистика</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <main class="col-12 col-xl-10 p-3">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="mb-0">Таблица записей</h4>
+
+                </div>
+
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Имя</th>
+                                <th>Фамилия</th>
+                                <th>Отчество</th>
+                                <th>Email</th>
+                                <th>Должность</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody"></tbody>
+                    </table>
+
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+    <script type="module" src="js/employees.js"></script>
+    <script type="module" src="js/logout.js"></script>
+
+</body>
+
+</html>

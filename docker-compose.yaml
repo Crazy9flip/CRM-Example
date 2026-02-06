@@ -1,0 +1,46 @@
+networks:
+  dev:
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+    networks:
+      - dev
+    depends_on:
+      - db
+
+
+
+  frontend:
+    build:
+      context: ./frontend
+    networks:
+      - dev
+
+  db:
+    image: postgres:17.6-alpine3.22
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - dev
+
+  nginx:
+    image: nginx:1.29-alpine3.22
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - frontend
+    volumes:
+      - "./nginx.conf:/etc/nginx/nginx.conf"
+    networks:
+      - dev

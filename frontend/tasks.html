@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Задачи</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light border-bottom sticky-top px-3">
+        <button class="navbar-toggler d-xl-none me-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Главная</a>
+        <div class="btn-group me-2 d-none d-sm-flex" id="branchSwitch">
+            <button type="button" class="btn btn-outline-primary active" data-branch="all">Все</button>
+            <button type="button" class="btn btn-outline-primary" data-branch="baitursynov">Байтурсынова</button>
+            <button type="button" class="btn btn-outline-primary" data-branch="gagarina">Гагарина</button>
+        </div>
+
+
+        <div class="dropdown d-sm-none me-2">
+            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Все филиалы
+            </button>
+            <ul class="dropdown-menu" id="branchSwitchMobile">
+                <li><button class="dropdown-item active" data-branch="all">Все</button></li>
+                <li><button class="dropdown-item" data-branch="baitursynov">Байтурсынова</button></li>
+                <li><button class="dropdown-item" data-branch="gagarina">Гагарина</button></li>
+            </ul>
+        </div>
+        <button id="logoutBtn" class="btn btn-outline-danger">Выйти</button>
+    </nav>
+
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+
+
+            <nav id="sidebarMenu" class="collapse d-xl-block bg-light sidebar col-xl-2">
+                <div class="position-sticky p-3">
+                    <div id="calendar" class="p-2"></div>
+                    <script type="module" src="js/tasks.js"></script>
+
+                    <div class="accordion" id="sidebarAccordion">
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingStaff">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTasks">
+                                    Задачи
+                                </button>
+                            </h2>
+                            <div id="collapseTasks" class="accordion-collapse collapse"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body p-2">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="index.html" class="btn btn-outline-primary w-100 mb-1">Расписание
+                                                задач</a></li>
+                                        <li><a href="tasks.html" class="btn btn-outline-primary w-100">Список задач</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingStaff">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseStaff">
+                                    Сотрудники
+                                </button>
+                            </h2>
+                            <div id="collapseStaff" class="accordion-collapse collapse"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body p-2">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="empoyees.html" class="btn btn-outline-primary w-100">Список
+                                                сотрудников</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingClients">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseClients">
+                                    Клиенты
+                                </button>
+                            </h2>
+                            <div id="collapseClients" class="accordion-collapse collapse"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body p-2">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="clients.html" class="btn btn-outline-primary w-100">Список
+                                                клиентов</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFinance">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFinance">
+                                    Финансы
+                                </button>
+                            </h2>
+                            <div id="collapseFinance" class="accordion-collapse collapse"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body p-2">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="expenses.html"
+                                                class="btn btn-outline-primary w-100 mb-1">Расходы</a></li>
+                                        <li><a href="salary.html" class="btn btn-outline-primary w-100">Зарплата</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFinance">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAnalysis">
+                                    Аналитика
+                                </button>
+                            </h2>
+                            <div id="collapseAnalysis" class="accordion-collapse collapse"
+                                data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body p-2">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="statistics.html"
+                                                class="btn btn-outline-primary w-100">Статистика</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <main class="col-sm-12 col-md-8 col-xl-6 mx-auto">
+                <div id="appointmentsContainer" class="my-2"></div>
+            </main>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="appointmentDetailsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Детали записи</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="appointmentDetailsBody">
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" id="finishAppointmentBtn">Завершить</button>
+                    <button class="btn btn-outline-danger" id="deleteAppointmentBtn">Удалить</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <script type="module" src="js/logout.js"></script>
+    <script type="module" src="js/branch_manager.js"></script>
+
+</body>
+
+</html>

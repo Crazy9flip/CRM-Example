@@ -1,0 +1,148 @@
+.sidebar {
+    height: 100vh;
+}
+
+.schedule {
+    border-left: 2px solid #ddd;
+    position: relative;
+    
+}
+
+.hour-row {
+    position: relative;
+    height: 75px;
+    border-top: 1px solid #ccc;
+}
+
+.hour-row-2 {
+    position: relative;
+    height: 25px;
+    border-top: 1px solid #ccc;
+    font-size: 1em;
+    
+    cursor: pointer;
+    color: #111;
+}
+
+.hour-label {
+    position: absolute;
+    left: -60px;
+    top: 0px;
+    width: 50px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.quarter {
+    position: relative;
+    height: 25px;
+    border-top: 1px solid #c9c9c9;
+    color: #9c9c9c;
+    font-size: 0.8em;
+    
+    cursor: pointer;
+}
+
+
+
+.quarter:hover::after,
+.hour-row-2:hover::after {
+    content: attr(data-time) " — Добавить сеанс";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #20c997;
+    color: white;
+    display: flex;
+    align-items: center;
+    
+    font-size: 0.8em;
+    z-index: 10;
+}
+
+
+
+
+.booking {
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  right: 0px;
+
+  margin-top: 0;
+  font-size: 12px;
+  background-color: #3b82f6;
+  color: white;
+
+  padding: 2px 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+#calendar td {
+    cursor: pointer;
+}
+
+
+
+#datePickerWrap {
+    position: relative;
+}
+
+#miniCalendar.calendar-popover {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    z-index: 1080;
+    width: 280px;
+    overflow: hidden;
+}
+
+@media (max-width: 1199.98px) { 
+  #sidebarMenu {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 250px; 
+    height: calc(100% - 56px);
+    overflow-y: auto;
+    z-index: 1040; 
+  }
+}
+
+
+.quarter.booked, .hour-row-2.booked {
+    background-color: #ffcccc !important;
+    cursor: pointer;
+}
+
+.quarter.booked:hover, .hour-row-2.booked:hover {
+    background-color: #ffaaaa !important;
+}
+
+.modal-lg {
+    max-width: 900px;
+}
+
+#appointmentsList .card {
+    border-left: 4px solid #0d6efd;
+    transition: transform 0.2s;
+}
+
+#appointmentsList .card:hover {
+    transform: translateX(5px);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
